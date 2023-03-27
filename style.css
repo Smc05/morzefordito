@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@300&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'Roboto';
+}
+body {
+    background: linear-gradient(to bottom, rgba(115, 172, 237, 0.766),rgb(194, 232, 252)) fixed;
+
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 2vw;
+    position: relative;
+}
+main h1 {
+    margin-bottom: 1rem;
+    border-bottom: 3px dotted #008df9;
+}
+nav {
+    background: #008df9;
+    padding:0.8rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.157);
+    height: 8rem;
+}
+nav button {
+    outline: none;
+    border: none;
+    padding: 12px;
+    font-size: 1.2rem;
+    width: 10rem;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: #fff;
+    font-weight: 500;
+
+}
+.navbutton {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.select {
+    transition: 0.2s ease-in-out;
+    border: 5px solid rgba(74, 215, 237, 0.851);
+    color: #008df9;
+    font-weight: 600;
+}
+.fordito {
+    background: linear-gradient(to bottom, rgba(235, 236, 248, 0.766),rgba(2, 252, 231, 0.623)) fixed;
+    background-size: cover;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.157);
+}
+h5 {
+    text-align: start;
+}
+textarea {
+    width: 100%;
+    resize: vertical;
+    font-size: 1.5rem;
+    font-weight: 500;
+    min-height: 5rem;
+    max-height: 15rem;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #008df9;
+    padding: 0.5rem;
+}
+textarea::placeholder {
+    font-size: 0.9rem;
+    
+}
+.input textarea:focus {
+    transition: 0.1s ease-in-out;
+    border: 4px solid #008df9;
+}
+.output{
+    position: relative;
+}
+.output textarea {
+    resize: none;
+}
+.output i, .output span {
+    position: absolute;
+    right: 8px;
+    top: -5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.output span {
+    font-size: 0.8rem;
+    right: 40px;
+    top: -3px;
+    color: #008df9;
+    display:none;
+}
+.copyactive {
+    transition: 0.5s ease-in-out;
+    color: #008df9;
+
+}
+aside {
+    background: linear-gradient(to bottom, rgba(235, 236, 248, 0.766),rgba(2, 252, 231, 0.623)) fixed;
+    background-size: cover;
+    padding: 1rem;
+    height: 29rem;
+    width: 12rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.157);
+
+}
+.kereses {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+.kereses input {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    padding: 5px;
+    outline:none;
+}
+.kereses input:focus {
+    transition: 0.1s ease-in-out;
+    border: 2px solid #008df9;
+}
+
+aside i {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
+.morze_table{
+overflow: auto;
+height: 18rem;
+}
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+.morze_table_button {
+    height: 3rem;
+    width: 3rem;
+    font-size: 2rem;
+    background-color: #008df9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    display: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.157);
+    overflow: hidden;
+}
+.morze_table_button i {
+    position: absolute;
+
+}
+.bi-x-lg{
+transform: translateX(-2.5rem);
+}
+.x-show {
+    transition: 0.5s;
+    transform: translateX(0);
+    color: pink;
+}
+.x-elfed{
+    transition: 0.5s;
+    transform: translateX(-2.5rem);
+}
+.menu-show {
+    transition: 0.5s;
+    transform: translateX(0);
+}
+.menu-elfed {
+    transition: 0.5s;
+    transform: translateX(2.5rem);
+}
+
+.kereses input, textarea {
+    box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.157);
+}
+.active {
+    display: block;
+
+    animation-name:menuactive;
+    animation-duration: 0.5s;
+
+}
+.deactive {
+    display: block;
+    animation-name:menudeactive;
+    animation-duration: 0.5s;
+
+}
+@keyframes menuactive {
+    0%{
+        scale: 0%;
+        transform: translate(50rem, 0);
+        z-index: -1;
+    }
+    100%{
+        scale: 100%;
+
+    }
+}
+
+@keyframes menudeactive {
+    0%{
+        scale: 100%;
+    }
+    100%{
+
+        scale: 0%;
+        transform: translate(50rem, 0);
+        z-index: -1;
+    }
+}
+
+
+@media (max-width: 575px) {
+    aside {
+        display: none;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: linear-gradient(to bottom, rgb(235, 236, 248),rgba(2, 252, 231, 0.682)) fixed;
+        background-size: cover;
+    }
+    .morze_table_button {
+        display: flex;
+    }
+}
+@media (min-width: 575px) {
+    aside {
+        display: block;
+
+    }
+
+}

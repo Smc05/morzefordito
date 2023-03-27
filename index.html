@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Morze Fordító</title>
+</head>
+<body>
+    <div class="container">
+        <main>
+        <h1>Morze Fordító</h1>
+            <nav>
+                <h2>Váltás</h1>
+                    <div class="navbutton">
+                        <button class="to_morze select">Morzéba</button>
+                        <button class="to_letter ">Betűbe</button>
+                    </div>
+            </nav>
+            <div class="fordito">
+                <div class="input">
+                    <h5>Írj ide valamit amit át szeretnél váltani morzéba</h5>
+                    <textarea name="" id="" cols="20" rows="3" placeholder="Például: szeretek morzézni"></textarea>
+                </div>
+                <div class="output">
+                    <h5>Eredmény:</h5>
+                    <textarea name="" id="" cols="20" rows="3" readonly></textarea>
+                    <i class="bi bi-files"></i>
+                    <span>Másolás sikeres</span>
+                </div>
+            </div>
+        </main>
+        <aside>
+            <h6>apró segítség</h6>
+            <h3>Morze ábc:</h3>
+            <div class="kereses">
+                <input type="text" placeholder="Keresés">
+                <i class="bi bi-search"></i>
+            </div>
+            <div class="kivalasztott"><h2></h2></div>
+            <div class="morze_table">
+            </div>
+        </aside>
+        <div class="morze_table_button"><i class="bi bi-x-lg"></i><i class="bi bi-list"></i></div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
